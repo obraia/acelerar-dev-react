@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
 }
 
@@ -21,7 +21,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url("./img/header-image.jpg");
+  background: url("../img/header-image.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -57,7 +57,7 @@ nav ul {
   z-index: 2;
 }
 
-nav ul a {
+nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
@@ -65,12 +65,12 @@ nav ul a {
   color: #fff;
 }
 
-nav ul a:hover {
+nav ul li a:hover {
   color: #e4bb23;
   transition: color 0.3s;
 }
 
-nav ul a.meio {
+nav ul li a.meio {
   margin-left: 45px;
   margin-right: 45px;
 }
@@ -91,7 +91,7 @@ nav .perfil img {
 /* FIM ESTILIZAÇÃO NAVBAR */
 
 header h1 {
-  font-size: 68px;
+  font-size: 64px;
   text-transform: uppercase;
   z-index: 2;
 }
@@ -333,7 +333,7 @@ footer .social-medias a.meio{
     }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 830px) {
     header, main, footer{
         padding: 0 20px;
     }
