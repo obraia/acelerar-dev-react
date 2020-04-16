@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --main-bg-color: #f3f3f3;;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  background-color: var(--main-bg-color);
+}
+
+a{
+    color: #000000;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    padding: 0 15px;
+    background-color: var(--main-bg-color);
+    box-shadow: 0px 0px 1px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.header__logo{
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.header__direct{
+    margin-left: auto;
+}
+
+.stories{
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 115px;
+    border-bottom: 1px solid #ccc;
+    overflow-x: scroll;
+}
+
+.stories::-webkit-scrollbar {
+    display: none;
+  }
+
+.stories__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 95px;
+    height: 95px;
+    margin-left: 15px;
+}
+
+.stories__item__image-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border-radius: 100%;
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,248,0,1) 0%, rgba(255,0,108,1) 60%, rgba(255,0,0,1) 100%);
+}
+
+.stories__item__image-border--my{
+    background-image: none;
+}
+
+.stories__item__image{
+    width: 65px;
+    height: 65px;
+    border: 3px solid var(--main-bg-color);
+    border-radius: 100%;
+}
+
+.stories__item__name{
+    width: 75px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;   
+}
+
+.post-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+}
+
+.post__header{
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding: 0 15px;
+}
+
+.post__header__image{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.post__header__menu{
+    margin-left: auto;
+}
+
+.post__image{
+    width: 100%;
+}
+
+.post__body{
+    display: flex;
+    flex-direction: column;
+}
+
+.post__body__header{
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding: 0 15px;
+}
+
+.post__body__header__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.post__body__header__buttons__comment{
+    margin: 0 15px;
+}
+
+.post__body__header__save{
+    margin-left: auto;
+}
+
+.post__body__description{
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.post__body__description a{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.post__footer{
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.post__footer__comment{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post__footer__comment__image{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+.post__footer__comment__textbox{
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    text-indent: 10px;
+    border: none;
+    background: none;
+}
+
+.post__footer__date{
+    font-size: 12px;
+    color: #7c7c7c;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 55px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    background-color: var(--main-bg-color);
+    box-shadow: 0px 0px 1px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.end_space{
+    height: 55px;
+}
+
+@media (min-width: 830px) {
+    .header{
+        background-color: #fff;
+    }
+    .container{
+        width: 50%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 15px 0;
+        overflow: hidden;
+    }
+    .post__header{
+        background-color: #fff;
+    }
+}
