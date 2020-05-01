@@ -1,0 +1,16 @@
+{
+  "name": "calculadora",
+  "version": "1",
+  "description": "Calculadora usando testes de unidades",
+  "main": "index.js",
+  "author": "Bryan Diniz",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^25.5.3",
+    "nodemon": "^2.0.3"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon src/index.js"
+  }
+}
