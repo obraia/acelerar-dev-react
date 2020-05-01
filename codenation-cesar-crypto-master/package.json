@@ -1,0 +1,25 @@
+{
+  "name": "desafio-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "auto-start": "nodemon --ignore './src/tmp' --exec node src/index.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "tmp"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "fs": "^0.0.1-security",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2",
+    "sha1": "^1.1.1"
+  }
+}
