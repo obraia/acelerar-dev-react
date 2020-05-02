@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1588447564570" clover="3.2.0">
+  <project timestamp="1588447564570" name="All files">
+    <metrics statements="36" coveredstatements="36" conditionals="12" coveredconditionals="9" methods="15" coveredmethods="15" elements="63" coveredelements="60" complexity="0" loc="36" ncloc="36" packages="1" files="1" classes="1"/>
+    <file name="index.js" path="C:\Users\Bryan\codenation\nodejs-12\src\index.js">
+      <metrics statements="36" coveredstatements="36" conditionals="12" coveredconditionals="9" methods="15" coveredmethods="15"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="9" count="313" type="stmt"/>
+      <line num="10" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="4" type="stmt"/>
+      <line num="17" count="4" type="stmt"/>
+      <line num="19" count="4" type="stmt"/>
+      <line num="20" count="36" type="stmt"/>
+      <line num="21" count="16" type="stmt"/>
+      <line num="24" count="16" type="cond" truecount="1" falsecount="1"/>
+      <line num="25" count="16" type="cond" truecount="2" falsecount="0"/>
+      <line num="26" count="12" type="cond" truecount="1" falsecount="1"/>
+      <line num="27" count="3" type="stmt"/>
+      <line num="31" count="4" type="stmt"/>
+      <line num="32" count="4" type="stmt"/>
+      <line num="34" count="4" type="stmt"/>
+      <line num="35" count="9" type="stmt"/>
+      <line num="37" count="9" type="stmt"/>
+      <line num="38" count="15" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="7" type="cond" truecount="1" falsecount="1"/>
+      <line num="40" count="7" type="stmt"/>
+      <line num="46" count="4" type="stmt"/>
+      <line num="47" count="4" type="stmt"/>
+      <line num="49" count="4" type="stmt"/>
+      <line num="53" count="4" type="stmt"/>
+      <line num="54" count="9" type="stmt"/>
+      <line num="55" count="9" type="stmt"/>
+      <line num="56" count="9" type="stmt"/>
+      <line num="61" count="4" type="stmt"/>
+      <line num="62" count="4" type="stmt"/>
+      <line num="63" count="4" type="stmt"/>
+      <line num="64" count="4" type="stmt"/>
+      <line num="66" count="4" type="stmt"/>
+      <line num="77" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
