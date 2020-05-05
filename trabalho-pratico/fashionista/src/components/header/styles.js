@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
 
 export const Container = styled.header`
     position: fixed;
@@ -7,7 +8,9 @@ export const Container = styled.header`
     display: flex;
     align-items: center;
     padding: 0 25px;
+    background-color: ${props => props.theme.colors.background};
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 `;
 
 export const Logo = styled.a`
@@ -50,9 +53,18 @@ export const SearchSubmit = styled.button`
     margin-left: 5px;
     border: none;
     outline: none;
+    background-color: transparent;
     cursor: pointer;
-`;
 
+    svg{
+        fill: ${props => props.theme.colors.secondary};
+        transition: fill .2s;
+        &:hover{
+            transition: fill .2s;
+            fill:  ${props => lighten(0.15, props.theme.colors.secondary)};
+        }
+    }
+`;
 
 export const Profile = styled.button`
     width: 40px;
@@ -61,6 +73,11 @@ export const Profile = styled.button`
     border-radius: 25px;
     border: none;
     outline: none;
+    overflow: hidden;
     cursor: pointer;
-    border: 1px solid red;
+`;
+
+export const ProfileImage = styled.img`
+    width: 40px;
+    height: 40px;
 `;

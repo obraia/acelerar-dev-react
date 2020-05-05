@@ -7,11 +7,14 @@ import darkTheme from './styles/themes/dark';
 
 import Header from './components/header';
 
+import Home from './pages/home';
+
 function App() {
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
-      <Header></Header>
+      <Header/>
+      <Home/>
     </ThemeProvider>
   );
 }

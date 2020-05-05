@@ -1,7 +1,10 @@
 import React from 'react';
 
 import 'typeface-righteous';
-import {Container, Logo, Profile, SearchGroup, SearchInput, SearchSubmit} from './styles';
+import {Container, Logo, Profile, ProfileImage, SearchGroup, SearchInput, SearchSubmit} from './styles';
+import Search from '../svg/search';
+
+import profileImage from './img/perfilExemple.jpg';
 
 function Header() {
 
@@ -10,9 +13,11 @@ function Header() {
             <Logo>Fashionista</Logo>
             <SearchGroup>
                 <SearchInput placeholder='Pesquisar...'/>
-                <SearchSubmit/>
+                <SearchSubmit><Search/></SearchSubmit>
             </SearchGroup>
-            <Profile/>
+            <Profile>
+                <ProfileImage src={profileImage}/>
+            </Profile>
         </Container>
     );
 }
