@@ -81,36 +81,3 @@ export const ArrowButton = styled.button`
         font-size: 52px;
     }
 `;
-
-export const TrendsList = styled.ul`
-    width: 1107px;
-    list-style: none;
-    display: flex;
-    overflow-x: scroll;
-
-    margin: 0 25px;
-    margin-bottom: 50px;
-
-    scroll-behavior: smooth;
-
-    ::-webkit-scrollbar {
-        scrollbar-width: 150px;
-		width: 8px;
-		height: 8px;
-	}
-	::-webkit-scrollbar-track {
-        border-radius: 10px;
-		background-color: ${props => lighten(0.3, props.theme.colors.secondary)};
-	}
-	::-webkit-scrollbar-thumb {
-        width: 100px;
-        height: 100px;
-		border-radius: 10px;
-        background-color: ${props => props.theme.colors.secondary};	
-	}
-`;
-
-export const TrendsListItem = styled.li`
-    margin-right: 25px;
-    margin-bottom: 40px;
-`;
