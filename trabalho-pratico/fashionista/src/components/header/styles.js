@@ -19,9 +19,11 @@ export const Logo = styled.a`
     text-transform: uppercase;
     color: ${props => props.theme.colors.textBackground};
     cursor: pointer;
+    transition: color .4s;
 
     &:hover{
-        color: ${props => props.theme.colors.textBackground};
+        transition: color .2s;
+        color: ${props => lighten(0.15, props.theme.colors.textBackground)};
     }
 `;
 
