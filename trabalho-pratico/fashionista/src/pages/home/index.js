@@ -16,18 +16,17 @@ import product04 from './img/product04.jpg';
 function Home() {
 
     const trendList = useRef(null);
-    const [trendScrollValue, setTrendScrollValue] = useState(0);
 
-    useEffect(() => {
-        trendList.current.scrollTo(trendScrollValue, 0);
-    }, [trendScrollValue]);
+    function scrollTredns(value){
+        trendList.current.scrollLeft += value;
+    }
 
     return (
         <Container>
             <Header />
             <Title><span>Em destaque</span></Title>
             <Trends>
-                <ArrowButton onClick={() => setTrendScrollValue(trendScrollValue - 283)}>
+                <ArrowButton onClick={() => scrollTredns(-283)}>
                     <FontAwesomeIcon icon={faChevronLeft} />
                 </ArrowButton>
                 <TrendsList ref={trendList}>
@@ -50,7 +49,7 @@ function Home() {
                         <ProductCard image={product01} isInPromotion={true} promotionPercent={15} />
                     </TrendsListItem>
                 </TrendsList>
-                <ArrowButton onClick={() => setTrendScrollValue(trendScrollValue + 283)}>
+                <ArrowButton onClick={() => scrollTredns(283)}>
                     <FontAwesomeIcon icon={faChevronRight} />
                 </ArrowButton>
             </Trends>
