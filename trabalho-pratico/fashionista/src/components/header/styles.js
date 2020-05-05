@@ -1,22 +1,24 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+    position: fixed;
     width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
     padding: 0 25px;
-    border: 1px solid red;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
 `;
 
 export const Logo = styled.a`
     font-family: Righteous, Arial, sans-serif;
     font-size: 26px;
     text-transform: uppercase;
+    color: ${props => props.theme.colors.textBackground};
     cursor: pointer;
 
     &:hover{
-        color: #8888;
+        color: ${props => props.theme.colors.textBackground};
     }
 `;
 
@@ -27,7 +29,7 @@ export const SearchGroup = styled.div`
     margin-left: auto;
     border-radius: 25px;
     border-bottom-right-radius: 5px;
-    border: 1px solid red;
+    border: 1px solid ${props => props.theme.colors.secondary};
 `;
 
 export const SearchInput = styled.input`
@@ -36,6 +38,10 @@ export const SearchInput = styled.input`
     font-size: 16px;
     border: none;
     outline: none;
+    font-family: Roboto, sans-serif;
+    font-weight: lighter;
+    color: ${props => props.theme.colors.textBackground};
+    background-color: transparent;
 `;
 
 export const SearchSubmit = styled.button`

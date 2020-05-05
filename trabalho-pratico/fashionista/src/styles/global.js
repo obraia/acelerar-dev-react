@@ -11,5 +11,6 @@ export default createGlobalStyle`
 body{
 	font-family: Roboto, sans-serif;
 	-webkit-font-smoothing: antialiased;
+	background-color: ${props => props.theme.colors.background};
 }
 `;
