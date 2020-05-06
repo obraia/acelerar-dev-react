@@ -7,48 +7,35 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 
 import ProductCard from '../../components/productCard';
 
-import product01 from './img/product01.jpg';
-import product02 from './img/product02.jpg';
-import product03 from './img/product03.jpg';
-import product04 from './img/product04.jpg';
-
-function TrendsSlide({product}) {
+function TrendsSlide({ products }) {
 
     const trendList = useRef(null);
 
-    function scrollTredns(value){
+    function scrollTredns(value) {
         trendList.current.scrollLeft += value;
     }
 
     return (
-            <Trends>
-                <ArrowButton onClick={() => scrollTredns(-283)}>
-                    <FontAwesomeIcon icon={faChevronLeft} />
-                </ArrowButton>
-                <TrendsList ref={trendList}>
-                    <TrendsListItem>
-                        <ProductCard image={product01} isInPromotion={true} promotionPercent={30} />
+        <Trends>
+            <ArrowButton onClick={() => scrollTredns(-283)}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+            </ArrowButton>
+            <TrendsList ref={trendList}>
+                {products.map(product => (
+                    <TrendsListItem key={product.code_color}>
+                        <ProductCard image={product.image}
+                            name={product.name}
+                            regularPrice={product.regular_price}
+                            actualPrice={product.actual_price}
+                            isInPromotion={product.on_sale}
+                            promotionPercent={product.discount_percentage} />
                     </TrendsListItem>
-                    <TrendsListItem>
-                        <ProductCard image={product02} isInPromotion={true} promotionPercent={50} />
-                    </TrendsListItem>
-                    <TrendsListItem>
-                        <ProductCard image={product03} isInPromotion={false} promotionPercent={0} />
-                    </TrendsListItem>
-                    <TrendsListItem>
-                        <ProductCard image={product04} isInPromotion={false} promotionPercent={0} />
-                    </TrendsListItem>
-                    <TrendsListItem>
-                        <ProductCard image={product01} isInPromotion={true} promotionPercent={15} />
-                    </TrendsListItem>
-                    <TrendsListItem>
-                        <ProductCard image={product01} isInPromotion={true} promotionPercent={15} />
-                    </TrendsListItem>
-                </TrendsList>
-                <ArrowButton onClick={() => scrollTredns(283)}>
-                    <FontAwesomeIcon icon={faChevronRight} />
-                </ArrowButton>
-            </Trends>
+                ))}
+            </TrendsList>
+            <ArrowButton onClick={() => scrollTredns(283)}>
+                <FontAwesomeIcon icon={faChevronRight} />
+            </ArrowButton>
+        </Trends>
     );
 }
 

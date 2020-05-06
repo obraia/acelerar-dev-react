@@ -36,17 +36,51 @@ export const ProductSpecs = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
-    background-color: #ffffff50;
+    background-color: #00000080;
     border-radius: 45px 45px 35px 10px;
     border: 5px solid ${props => props.theme.colors.primary};
     opacity: 0;
     z-index: 1;
     cursor: pointer;
+    color: ${props => props.theme.colors.textPrimary};
+    transition: opacity .2s;
+    
+    h1{
+        opacity: 0;
+    }
 
     &:hover{
-        transition: .2s;
+        transition: opacity .2s;
         opacity: 100%;
+
+        h1{
+            transition: opacity .6s;
+            opacity: 100%;
+        }
     }
+
+
+`;
+
+export const ProductName = styled.h1`
+    text-align: center;
+`;
+
+export const RegularPrice = styled.h1`
+    text-decoration: line-through;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: lighter;
+    font-size: 20px;
+`;
+
+export const ActualPrice = styled.h1`
+    text-align: center;
+    margin-top: 10px;
+    font-size: 28px;
 `;
