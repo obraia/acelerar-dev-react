@@ -1,23 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import 'typeface-righteous';
-import {Container, Logo, Profile, ProfileImage, SearchGroup, SearchInput, SearchSubmit} from './styles';
+import { Container, Logo, Profile, ProfileImage, SearchGroup, SearchInput, SearchSubmit } from './styles';
 import Search from '../svg/search';
+
+import HeaderMenu from '../headerMenu';
 
 import profileImage from './img/perfilExemple.jpg';
 
 function Header() {
 
-    return(
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+    return (
         <Container>
             <Logo>Fashionista</Logo>
             <SearchGroup>
-                <SearchInput placeholder='Pesquisar...'/>
-                <SearchSubmit><Search/></SearchSubmit>
+                <SearchInput placeholder='Pesquisar...' />
+                <SearchSubmit><Search /></SearchSubmit>
             </SearchGroup>
-            <Profile>
-                <ProfileImage src={profileImage}/>
+            <Profile onClick={() => setIsMenuVisible(!isMenuVisible)}>
+                <ProfileImage src={profileImage} />
             </Profile>
+            {isMenuVisible ? <HeaderMenu setIsMenuVisible={setIsMenuVisible}/> : null}
         </Container>
     );
 }

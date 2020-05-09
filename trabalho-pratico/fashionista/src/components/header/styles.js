@@ -77,6 +77,7 @@ export const Profile = styled.button`
     outline: none;
     overflow: hidden;
     cursor: pointer;
+    z-index: 5;
 `;
 
 export const ProfileImage = styled.img`

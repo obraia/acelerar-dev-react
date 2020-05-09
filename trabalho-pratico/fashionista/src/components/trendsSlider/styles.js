@@ -11,10 +11,11 @@ export const Trends = styled.section`
 export const ArrowButton = styled.button`
     width: 50px;
     height: 50px;
+    margin-bottom: 70px;
     border: none;
     outline: none;
     background-color: transparent;
-    font-size: 48px;
+    font-size: 50px;
     color: ${props => props.theme.colors.textSecondary};
     cursor: pointer;
     transition: color .2s;

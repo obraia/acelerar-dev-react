@@ -23,6 +23,8 @@ export const Header = styled.div`
     background-position: 0px 60px;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    border: 5px solid ${props => props.theme.colors.secondary};
+    border-right: none;
 `;
 
 export const Title = styled.h1`

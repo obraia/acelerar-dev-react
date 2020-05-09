@@ -56,6 +56,7 @@ export const ProductSpecs = styled.div`
 
     &:hover{
         transition: opacity .2s;
+        backdrop-filter: blur(5px);
         opacity: 100%;
 
         h1{
@@ -63,8 +64,6 @@ export const ProductSpecs = styled.div`
             opacity: 100%;
         }
     }
-
-
 `;
 
 export const ProductName = styled.h1`
@@ -83,4 +82,7 @@ export const ActualPrice = styled.h1`
     text-align: center;
     margin-top: 10px;
     font-size: 28px;
+    padding: 5px 10px;
+    border-radius: 15px 15px 15px 5px;
+    background-color: ${props => props.theme.colors.primary};
 `;
